@@ -46,6 +46,8 @@ Page({
   
     // ⚠️ 判断是否已登录（有 userInfo 且 openid 不为 guest）
     const userInfo = app.globalData.userInfo;
+    
+    
     if (!userInfo || userInfo.openid === 'guest') {
       wx.showModal({
         title: '提示',
@@ -86,6 +88,12 @@ Page({
   
     // ✅ 从云数据库获取 userProfile 的最新头像和昵称（覆盖本地显示）
     this.getUserProfileFromCloud(); 
+  },
+
+
+  onShow() {
+    // 页面每次展示时触发
+    this.getUserProfileFromCloud();
   },
   
 
@@ -641,7 +649,8 @@ Page({
           console.error('获取昵称失败', err);
         }
       });
-  }
+  },
+
 
 
 

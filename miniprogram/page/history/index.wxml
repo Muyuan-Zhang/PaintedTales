@@ -1,7 +1,7 @@
 <view class="page-container">
   <image class="background" src="../../image/background_history.png"mode="aspectFill"/>
   <view class="custom-nav">
-    <image class="back-icon" src="../../image/wechat.png" bindtap="goBack"></image>
+    <image class="back-icon" src="../../image/back_to.png" bindtap="goBack"></image>
     <text class="nav-title">历史记录</text>
   </view>
 
